@@ -1,21 +1,14 @@
 //http://youmightnotneedjquery.com/
-var _b = (function( document ) {
+var _b = (function( window , document ) {
 
 
 
-    HTMLElement.prototype.append = function(htmlContent) {
+    HTMLElement.prototype.append = function(appendElement) {
 
-        // Grab an element
-        var el = this; //document.getElementById('thingy'),
-        
-        // Make a new div
-        var elChild = document.createElement('div');
+        var el = this;
 
-        // Give the new div some content
-        elChild.innerHTML = htmlContent;
-
-        // Jug it into the parent element
-        el.appendChild(elChild);
+        // Append it
+        el.appendChild(appendElement);
         
         return this;
     
@@ -23,14 +16,12 @@ var _b = (function( document ) {
 
 
     
-    HTMLElement.prototype.prepend = function(htmlContent) {
+    HTMLElement.prototype.prepend = function(prependElement) {
 
         var el = this
-        elChild = document.createElement('div');
-        elChild.innerHTML = htmlContent;
 
         // Prepend it
-        el.insertBefore(elChild, el.firstChild);    
+        el.insertBefore(prependElement, el.firstChild);    
     
         return this;
         
@@ -61,4 +52,4 @@ var _b = (function( document ) {
 
 
 
-})(document);
+})(window , document);
