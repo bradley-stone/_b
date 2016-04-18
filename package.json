@@ -1,0 +1,26 @@
+{
+  "name": "underscore-b",
+  "version": "1.0.0",
+  "description": "_b",
+  "main": "index.js",
+  "scripts": {
+    "test": "node-qunit-phantomjs test/test.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bradley-stone/_b.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bradley-stone/_b/issues"
+  },
+  "homepage": "https://github.com/bradley-stone/_b#readme",
+  "dependencies": {
+    "chai": "^3.5.0",
+    "jsdom": "^3.1.2",
+    "mocha": "^2.4.5",
+    "mocha-jsdom": "^1.1.0",
+    "node-qunit-phantomjs": "^1.4.0"
+  }
+}

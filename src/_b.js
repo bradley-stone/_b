@@ -1,5 +1,5 @@
 //http://youmightnotneedjquery.com/
-var _b = (function( window ) {
+var _b = (function( document ) {
 
 
 
@@ -61,4 +61,4 @@ var _b = (function( window ) {
 
 
 
-})(window);
+})(document);

@@ -1,0 +1,31 @@
+<!doctype html>
+
+
+<html>
+    
+    <head>
+        
+        <script src="qunit.js"></script>
+        <script src="../src/_b.js"></script>
+
+    </head>
+    
+    
+    <body>
+<div id="qunit"></div>
+  <div id="qunit-fixture"></div>
+        <div id="test">Test Content</div>
+
+        <script>
+            //console.log(_b('#test').innerHTML);
+            //_b('#test').prepend('<h1>hiBefore</h1>').append('<h1>hiAfter</h1>').addClass('testclass');
+
+            QUnit.test( "hello test", function( assert ) {
+                assert.ok( 1 == "1", "Passed!" );
+            });
+        </script>
+        
+        
+    </body>
+    
+</html>
