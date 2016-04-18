@@ -12,17 +12,56 @@
     
     
     <body>
-<div id="qunit"></div>
-  <div id="qunit-fixture"></div>
+        <div id="qunit"></div>
+        <div id="qunit-fixture"></div>
         <div id="test">Test Content</div>
 
         <script>
             //console.log(_b('#test').innerHTML);
             //_b('#test').prepend('<h1>hiBefore</h1>').append('<h1>hiAfter</h1>').addClass('testclass');
 
-            QUnit.test( "hello test", function( assert ) {
-                assert.ok( 1 == "1", "Passed!" );
+            QUnit.test( "selector test", function( assert ) {
+                var testElement = _b('#test');
+                
+                assert.ok( testElement.innerHTML === "Test Content", "Passed!" );
             });
+
+
+
+            QUnit.test( "append", function( assert ) {
+                var testElement = _b('#test');
+                
+                var newNode = document.createElement('div');
+                newNode.innerHTML = 'After';
+                testElement.append(newNode);
+
+                assert.ok( testElement.innerHTML === "Test Content<div>After</div>", "Passed!" );
+            });
+
+
+
+            QUnit.test( "prepend test", function( assert ) {
+                var testElement = _b('#test');
+                
+                var newNode = document.createElement('div');
+                newNode.innerHTML = 'Before';
+                testElement.prepend(newNode);
+
+                assert.ok( testElement.innerHTML === "<div>Before</div>Test Content<div>After</div>", "Passed!" );
+            });
+
+
+
+            QUnit.test( "addClass test", function( assert ) {
+                var testElement = _b('#test');
+                
+                testElement.addClass('tester');
+                
+
+                assert.ok( testElement.className.indexOf('tester') >= 0, "Passed!" );
+            });
+
+
         </script>
         
         
